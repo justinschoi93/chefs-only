@@ -1,5 +1,6 @@
 import reactLogo from '../../assets/react.svg'
 import viteLogo from '../../../public/vite.svg'
+import './Footer.css';
 
 const Footer = () => {
     return (
@@ -12,7 +13,7 @@ const Footer = () => {
                 <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <h1>Vite + React</h1>
+            <h8>Vite + React</h8>
             <div className="card">
                 <p>
                 Edit <code>src/App.jsx</code> and save to test HMR
