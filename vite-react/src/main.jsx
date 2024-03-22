@@ -4,14 +4,23 @@ import App from './App.jsx'
 import './index.css'
 
 import { Auth0Provider } from '@auth0/auth0-react';
+import { getConfig } from './config.js';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <Auth0Provider
-    domain={"https://chefs-only.us.auth0.com"}
-    clientId={"aM515FolXqwZz3nvuVWeGsNkIF6XjXBT"}
-    authorizationParams={{
-      redirect_uri: window.location.origin
-    }}>
+
+
+const config = getConfig();
+
+const providerConfig = {
+  domain: config.domain,
+  clientId: config.clientId,
+  authorizationParams: {
+    redirect_uri: window.location.origin,
+    ...(config.audience ? { audience: config.audience } : null),
+  },
+};
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Auth0Provider>
     <App />
   </Auth0Provider>,
 )

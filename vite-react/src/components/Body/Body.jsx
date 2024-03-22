@@ -5,11 +5,11 @@ import './Body.css';
 
 const Body = () => {
     return (
-        <body>
+        <div className="body">
             <h1>CHEFS ONLY.</h1>
             <LoginButton />
             <LogoutButton />
-        </body>
+        </div>
     )
 }
 

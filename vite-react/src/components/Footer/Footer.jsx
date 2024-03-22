@@ -13,7 +13,7 @@ const Footer = () => {
                 <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <h8>Vite + React</h8>
+            <p>Vite + React</p>
             <div className="card">
                 <p>
                 Edit <code>src/App.jsx</code> and save to test HMR
