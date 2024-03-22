@@ -1,2 +1,0 @@
-# chefs-only
-CHEFS ONLY.
